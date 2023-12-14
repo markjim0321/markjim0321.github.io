@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資訊管理系網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: #f5aeae;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(131, 192, 221);
+            padding: 0.5em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.drop-down-menu {
+            border: #ccc 1px solid;
+            display: inline-block; 
+        }
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+            border-right: #ccc 1px solid;
+            display: inline-block;
+        }
+        ul.drop-down-menu > li:last-child {
+            border-right: none;
+        }
+        ul.drop-down-menu a {
+            background-color: #fff;
+            color: #333;
+            display: block;
+            padding: 0 30px;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        ul.drop-down-menu a:hover {
+            background-color: #e1e978;
+            color: #fff;
+        }
+        ul.drop-down-menu li:hover > a {
+            background-color: #e1e978;
+            color: #fff;
+        }
+        ul.drop-down-menu ul {
+            border: #ccc 1px solid;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            top: 100%;
+            min-width: 180px;
+            display: none;
+        }
+        ul.drop-down-menu ul li {
+            border-bottom: #ccc 1px solid;
+            display: block; /* Display sub-menu items as blocks for vertical arrangement */
+        }
+        ul.drop-down-menu ul li:last-child {
+            border-bottom: none;
+        }
+        ul.drop-down-menu ul ul {
+            z-index: 999;
+            top: 0;
+            left: 100%;
+        }
+        ul.drop-down-menu li:hover > ul {
+            display: block;
+        }
+        section {
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img.logo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 照片輪播的樣式，可以根據需求進行調整 */
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img.slide-image {
+            width: 100%;
+        }
+
+        /* 照片輪播的前、後按鈕樣式 */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header 區域 -->
+    <header>
+        <img class="logo" src="picture/logo.jpg" alt="資訊管理系">
+        <nav>
+            <ul class="drop-down-menu">
+                <li><a href="#">首頁</a></li>
+                <li>
+                    <a href="#">師資陣容</a>
+                    <ul>
+                        <li><a href="#">專任老師</a></li>
+                        <li><a href="#">兼任老師</a></li>
+                        <li><a href="#">行政人員</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">招生</a>
+                    <ul>
+                        <li><a href="#">新生專區</a></li>
+                        <li><a href="#">大學部</a></li>
+                        <li><a href="#">碩士部</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">學習</a></li>
+                <li><a href="#">新聞及活動</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Body 區域 -->
+    <div>
+        <h2>關於我們</h2>
+        <p>資訊管理系致力於提供高品質的教育和培訓，培養學生在資訊科技領域的專業知識和技能。</p>
+        <!-- 在這裡添加更多的內容區塊 -->
+    </div>
+
+     <!-- 照片輪播區域 -->
+     <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slide-image" src="picture/下載.png" alt="Slide 1">
+        </div>
+
+        <div class="mySlides">
+            <img class="slide-image" src="picture/imslider01.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides">
+            <img class="slide-image" src="//www.youtube.com/embed/TGEdRIsBK4M?wmode=transparent" alt="Slide 3">
+        </div>
+
+        <!-- 前一張和下一張按鈕 -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div id="Dyn_2_2" class="M36373 container">
+
+        <div class="module module-compound">
+                <div class="mouter">
+                    
+                        
+                        
+                        <div class="mbox" style="width: 65.00%">
+                            <div class="sm_div_compound_ac4f8e453ea85ef27809853d0fda9f3e6_33967">
+        <script>
+        $(document).ready(function() {
+            $('#a621902e55fcb33bb2512c9f0eaff1459_Div .nav-tabs a').keydown(function (e) {
+                if (e.shiftKey && e.keyCode === 9) {
+                   $(this).parent().prev().children().tab('show');
+                   $(this).parent().prev().children().prop("tabindex","0");
+                  }
+            });
+            $('#a621902e55fcb33bb2512c9f0eaff1459_Div .nav-tabs a').focus(function (e) {
+                a621902e55fcb33bb2512c9f0eaff1459_goto(this);
+            });
+        });
+        function a621902e55fcb33bb2512c9f0eaff1459_goto(obj){
+        console.log(obj);
+                $(obj).tab('show');
+                $(obj).prop("tabindex","0");
+                $(obj).attr("aria-selected","true");
+                $(obj).parent().siblings().children().prop("tabindex","-1");
+                $(obj).parent().siblings().children().removeAttr("aria-selected");
+                $('#sm_a621902e55fcb33bb2512c9f0eaff1459_0').prop("tabindex","0");
+        }
+        </script>
+        <div id="a621902e55fcb33bb2512c9f0eaff1459_Div" class="module module-complex md_style1">
+            <div class="minner">
+                <header class="mt ">
+             
+            <h2 class="mt-title">最新消息</h2>
+        </header>
+        
+                <section class="mb">
+                    <nav><ul class="nav nav-tabs">
+                    
+                    
+                    <li class="active"><a title="行政公告" id="sm_a621902e55fcb33bb2512c9f0eaff1459_0" tabindex="0" href="#cmb_133_0" data-toggle="tab" role="tab" aria-selected="true"><h2>行政公告</h2></a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a title="演講與研討會" id="sm_a621902e55fcb33bb2512c9f0eaff1459_1" tabindex="-1" href="#cmb_133_1" data-toggle="tab" role="tab"><h2>演講與研討會</h2></a></li>
+                    
+                    
+                    
+                    
+                    <li><a title="榮譽榜" id="sm_a621902e55fcb33bb2512c9f0eaff1459_2" tabindex="-1" href="#cmb_133_2" data-toggle="tab" role="tab"><h2>榮譽榜</h2></a></li>
+                    
+                    
+                    
+                    
+                    <li><a title="徵才實習獎助" id="sm_a621902e55fcb33bb2512c9f0eaff1459_3" tabindex="-1" href="#cmb_133_3" data-toggle="tab" role="tab"><h2>徵才實習獎助</h2></a></li>
+                    
+                    
+                    
+                    
+                    <li><a title="所有訊息" id="sm_a621902e55fcb33bb2512c9f0eaff1459_4" tabindex="-1" href="#cmb_133_4" data-toggle="tab" role="tab"><h2>所有訊息</h2></a></li>
+                    
+                    
+                    </ul></nav>
+                    <div class="tab-content">
+                        
+                        
+                        
+                        
+                        
+                            <div class="tab-pane fade in active" id="cmb_133_0">
+                                <div id="sm_div_cmb_133_32527">
+        <div class="module module-special md_style1">
+        <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">行政公告</h2>
+        </header>
+        
+            <section class="mb">
+                
+              
+                  
+            <div class="row listBS">
+            
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-17 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-297435,r88.php?Lang=zh-tw" title="【招生】113學年度碩士在職專班熱情招生中~歡迎報名！(含個人審查資料表登錄系統網址與入學考試評分原則、報名期間：自112.11.29 12:00至112.12.20 17:00止)">
+                        
+                        【招生】113學年度碩士在職專班熱情招生中~歡迎報名！(含個人審查資料表登錄系統網址與入學考試評分原則、報名期間：自112.11.29 12:00至112.12.20 17:00止)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-07 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-299021,r88.php?Lang=zh-tw" title="【招生】113學年度碩士班考試入學簡章公告(報名期間：112.12.05 12:00至112.12.20止)">
+                        
+                        【招生】113學年度碩士班考試入學簡章公告(報名期間：112.12.05 12:00至112.12.20止)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-11 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-299785,r88.php?Lang=zh-tw" title="【招生】113學年度碩士班甄試入學遞補備取生名單(12/11更新)">
+                        
+                        【招生】113學年度碩士班甄試入學遞補備取生名單(12/11更新)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-01 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-194226,r88.php?Lang=zh-tw" title="【行政】國立中山大學資訊管理學系誠徵專任教師">
+                        
+                        【行政】國立中山大學資訊管理學系誠徵專任教師
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                
+            
+            </div>
+        
+        
+              
+               
+                    <p class="more"><a href="https://web.mis.nsysu.edu.tw/p/403-1232-88-1.php?Lang=zh-tw" title="更多">更多</a></p>
+               
+            </section>
+        </div>
+        </div>
+        
+        <!-- generated at Mon Dec 11 2023 14:38:07 --></div>
+                           <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_rcg_mstr&Nbr=88','#sm_div_cmb_133_32527','',function(){menuDropAct(0);});})</script>
+                                
+                                    <a id="sm_a621902e55fcb33bb2512c9f0eaff1459_1_href" href="" onkeyup="$('#sm_a621902e55fcb33bb2512c9f0eaff1459_1').focus();"><img alt="" src="/images/clear.gif"></a>
+                                
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tab-pane fade" id="cmb_133_1">
+                                <div id="sm_div_cmb_133_32579">
+        <div class="module module-special md_style1">
+        <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">演講與研討會</h2>
+        </header>
+        
+            <section class="mb">
+                
+              
+                  
+            <div class="row listBS">
+            
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-06 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322518,r11.php?Lang=zh-tw" title="【專題演講】資管系12/7：數據決策AI+(李忠軒總經理-智合科技)">
+                        
+                        【專題演講】資管系12/7：數據決策AI+(李忠軒總經理-智合科技)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-04 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322321,r11.php?Lang=zh-tw" title="【專題演講】資管系12/14：資訊與管理的跨域研究經驗分享(陳灯能教授-國立屏東科技大學資訊管理系教授兼任管理學院副院長)">
+                        
+                        【專題演講】資管系12/14：資訊與管理的跨域研究經驗分享(陳灯能教授-國立屏東科技大學資訊管理系教授兼任管理學院副院長)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-04 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322361,r11.php?Lang=zh-tw" title="【專題演講】資管系12/7：使用者導向資訊系統設計(顧宜錚教授-輔仁大學企業管理學系教授兼系主任)">
+                        
+                        【專題演講】資管系12/7：使用者導向資訊系統設計(顧宜錚教授-輔仁大學企業管理學系教授兼系主任)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-29 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322142,r11.php?Lang=zh-tw" title="【專題演講】資管系11/30：數位轉型與製造案例分享(賴炎村總經理、劉智光副總-凡事康流體科技)">
+                        
+                        【專題演講】資管系11/30：數位轉型與製造案例分享(賴炎村總經理、劉智光副總-凡事康流體科技)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                
+            
+            </div>
+        
+        
+              
+               
+                    <p class="more"><a href="https://web.mis.nsysu.edu.tw/p/403-1232-11-1.php?Lang=zh-tw" title="更多">更多</a></p>
+               
+            </section>
+        </div>
+        </div>
+        
+        <!-- generated at Wed Dec 06 2023 17:07:22 --></div>
+                          <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_rcg_mstr&Nbr=11','#sm_div_cmb_133_32579','',function(){menuDropAct(0);});})</script>
+        
+                                
+                                    <a id="sm_a621902e55fcb33bb2512c9f0eaff1459_2_href" href="" onkeyup="$('#sm_a621902e55fcb33bb2512c9f0eaff1459_2').focus();"><img alt="" src="/images/clear.gif"></a>
+                                
+        
+                            </div>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tab-pane fade" id="cmb_133_2">
+                                <div id="sm_div_cmb_133_32543">
+        <div class="module module-special md_style1">
+        <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">榮譽榜</h2>
+        </header>
+        
+            <section class="mb">
+                
+              
+                  
+            <div class="row listBS">
+            
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-07 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322562,r176.php?Lang=zh-tw" title="【榮譽】賀博士班畢業生張簡郁庭同學榮獲本校111學年度博士研究生優秀畢業論文獎">
+                        
+                        【榮譽】賀博士班畢業生張簡郁庭同學榮獲本校111學年度博士研究生優秀畢業論文獎
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-27 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-321938,r176.php?Lang=zh-tw" title="【公告】2023中山資管週榮譽榜(專案與博士班論文獎項)">
+                        
+                        【公告】2023中山資管週榮譽榜(專案與博士班論文獎項)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-16 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-321413,r176.php?Lang=zh-tw" title="【榮譽】賀博士班阮珊亭、碩士班周紘樟與蕭扞丞等三位同學榮獲2023第十六屆崇越論文大賞佳作！">
+                        
+                        【榮譽】賀博士班阮珊亭、碩士班周紘樟與蕭扞丞等三位同學榮獲2023第十六屆崇越論文大賞佳作！
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-06 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-320699,r176.php?Lang=zh-tw" title="【榮譽】賀113級大學部專案榮獲2023第28屆全國大專院校資訊應用服務創新競賽多個獎項！">
+                        
+                        【榮譽】賀113級大學部專案榮獲2023第28屆全國大專院校資訊應用服務創新競賽多個獎項！
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                
+            
+            </div>
+        
+        
+              
+               
+                    <p class="more"><a href="https://web.mis.nsysu.edu.tw/p/403-1232-176-1.php?Lang=zh-tw" title="更多">更多</a></p>
+               
+            </section>
+        </div>
+        </div>
+        
+        <!-- generated at Thu Dec 07 2023 14:59:05 --></div>
+                          <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_rcg_mstr&Nbr=176','#sm_div_cmb_133_32543','',function(){menuDropAct(0);});})</script>
+        
+                                
+                                    <a id="sm_a621902e55fcb33bb2512c9f0eaff1459_3_href" href="" onkeyup="$('#sm_a621902e55fcb33bb2512c9f0eaff1459_3').focus();"><img alt="" src="/images/clear.gif"></a>
+                                
+        
+                            </div>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tab-pane fade" id="cmb_133_3">
+                                <div id="sm_div_cmb_133_32531">
+        <div class="module module-special md_style1">
+        <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">徵才實習獎助</h2>
+        </header>
+        
+            <section class="mb">
+                
+              
+                  
+            <div class="row listBS">
+            
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2022-03-11 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-31034,r177.php?Lang=zh-tw" title="【行政】歡迎系友提供徵才與實習資訊">
+                        
+                        【行政】歡迎系友提供徵才與實習資訊
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-08-31 </i>
+                    <a href="https://ag-osa.nsysu.edu.tw/p/403-1087-5196-1.php?Lang=zh-tw" target="_blank" title="【轉知】學務處徵才/實習/職涯公告彙整網頁(另開新視窗)">
+                        
+                        【轉知】學務處徵才/實習/職涯公告彙整網頁
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-08 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322591,r177.php?Lang=zh-tw" title="【轉知】美光實習線上說明會 &amp; 2024實習生招募">
+                        
+                        【轉知】美光實習線上說明會 &amp; 2024實習生招募
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-11-23 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-321721,r177.php?Lang=zh-tw" title="【轉知】美光Micron徵才資訊 : IT Software Engineer - Engineering and Technology Development">
+                        
+                        【轉知】美光Micron徵才資訊 : IT Software Engineer - Engineering and Technology Development
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                
+            
+            </div>
+        
+        
+              
+               
+                    <p class="more"><a href="https://web.mis.nsysu.edu.tw/p/403-1232-177-1.php?Lang=zh-tw" title="更多">更多</a></p>
+               
+            </section>
+        </div>
+        </div>
+        
+        <!-- generated at Fri Dec 08 2023 08:49:21 --></div>
+                          <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_rcg_mstr&Nbr=177','#sm_div_cmb_133_32531','',function(){menuDropAct(0);});})</script>
+        
+                                
+                                    <a id="sm_a621902e55fcb33bb2512c9f0eaff1459_4_href" href="" onkeyup="$('#sm_a621902e55fcb33bb2512c9f0eaff1459_4').focus();"><img alt="" src="/images/clear.gif"></a>
+                                
+        
+                            </div>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            <div class="tab-pane fade" id="cmb_133_4">
+                                <div id="sm_div_cmb_133_32534">
+        <div class="module module-special md_style1">
+        <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">所有訊息</h2>
+        </header>
+        
+            <section class="mb">
+                
+              
+                  
+            <div class="row listBS">
+            
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-11 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-299785,r1173.php?Lang=zh-tw" title="【招生】113學年度碩士班甄試入學遞補備取生名單(12/11更新)">
+                        
+                        【招生】113學年度碩士班甄試入學遞補備取生名單(12/11更新)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-08 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322591,r1173.php?Lang=zh-tw" title="【轉知】美光實習線上說明會 &amp; 2024實習生招募">
+                        
+                        【轉知】美光實習線上說明會 &amp; 2024實習生招募
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-07 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322562,r1173.php?Lang=zh-tw" title="【榮譽】賀博士班畢業生張簡郁庭同學榮獲本校111學年度博士研究生優秀畢業論文獎">
+                        
+                        【榮譽】賀博士班畢業生張簡郁庭同學榮獲本校111學年度博士研究生優秀畢業論文獎
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                </div><div class="row listBS">
+            
+                
+                <div class="d-item d-title col-sm-12">
+        <div class="mbox">
+            <div class="d-txt">
+                <div class="mtitle">
+                    <i class="mdate before">2023-12-06 </i>
+                    <a href="https://web.mis.nsysu.edu.tw/p/406-1232-322518,r1173.php?Lang=zh-tw" title="【專題演講】資管系12/7：數據決策AI+(李忠軒總經理-智合科技)">
+                        
+                        【專題演講】資管系12/7：數據決策AI+(李忠軒總經理-智合科技)
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+                
+            
+            </div>
+        
+        
+              
+               
+                    <p class="more"><a href="https://web.mis.nsysu.edu.tw/p/403-1232-1173-1.php?Lang=zh-tw" title="更多">更多</a></p>
+               
+            </section>
+        </div>
+        </div>
+        
+        <!-- generated at Mon Dec 11 2023 14:32:54 --></div>
+                          <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_rcg_mstr&Nbr=1173','#sm_div_cmb_133_32534','',function(){menuDropAct(0);});})</script>
+        
+                                
+        
+                            </div>
+                    
+                        
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- generated at Tue Dec 05 2023 12:24:11 --></div>
+                            <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_cmb_mstr&Nbr=133','.sm_div_compound_ac4f8e453ea85ef27809853d0fda9f3e6_33967','',function(){menuDropAct(0);});})</script>
+                        </div>
+                    
+                        
+                        
+                        <div class="mbox" style="width: 35.00%">
+                            <div class="sm_div_compound_ac4f8e453ea85ef27809853d0fda9f3e6_36374">
+        <div class="module module-um md_style1">
+           <div class="mouter">
+            <header class="mt ">
+             
+            <h2 class="mt-title">焦點訊息</h2>
+        </header>
+        
+            <section class="mb">
+                <div class="minner">
+                    <div class="meditor">
+                    <!-- 無法顯示圖片、取消此段
+        <style>
+        img.focus-photo{
+            display:none;
+        }
+        </style>
+        -->
+        
+        <script type="text/javascript">
+        //檔案載入完後設定高度
+        $(".focus-photo").load(function(){
+            var t = setInterval(function(){
+                    if($.if_laoded()>0)
+                    {
+                         var focus_h= $.get_h();
+                         $(".focus-photo").css("height",focus_h);
+                         $(".focus-photo").fadeIn(400);
+                         clearInterval(t);
+                    }
+              },50);
+        })
+        
+        //確定左邊是否完全載入(判斷更多是否出現)
+        $.if_laoded= function()
+        {
+              var v = $(".M36373 .module-compound").children().children(".mbox").eq(0).find(".tab-pane").eq(0).find("p.more").length;
+        console.log(v);
+               return v ;
+        }
+        
+        $.get_h= function()
+        {
+              var focus_h = $(".M36373 .module-compound").children().children(".mbox").eq(0).find("section.mb").height();
+               return focus_h ;
+        }
+        </script>
+        
+        <!--
+        <a href="https://exam-acad.nsysu.edu.tw/exam_netlist/netlist_main.php?ExmNo=41" target=_blank" title="國立中山大學113學年度《碩士班考試入學》招生簡章(另開新視窗)">
+              <img class="focus-photo" src="/static/file/232/1232/img/3384/113masterexam.jpg" width="80%" alt="歡迎報名中山資管113學年度《碩士班考試入學》">
+        </a>
+        -->
+        
+        <!--
+        <a href="https://web.mis.nsysu.edu.tw/p/412-1232-5157.php?Lang=zh-tw" target=_blank" title="給高中生">
+              <img class="focus-photo" src="/static/file/232/1232/img/3384/559067970.jpg" width="80%" alt="給高中生~歡迎選填中山資管">
+        </a>
+        -->
+        
+        <!--
+        <a href="https://exam-acad.nsysu.edu.tw/exam_netlist/netlist_main.php?ExmNo=51" target=_blank" title="國立中山大學112學年度《博士班》招生簡章(另開新視窗)">
+              <img class="focus-photo" src="/static/file/232/1232/img/3384/112_PHD.png" width="80%" alt="歡迎報名中山資管112學年度《博士班》">
+        </a>
+        -->
+        
+        <a href="https://exam-acad.nsysu.edu.tw/exam_netlist/netlist_main.php?ExmNo=31" target="_blank&quot;" title="國立中山大學113學年度《碩士在職專班》招生簡章(另開新視窗)">
+              <img class="focus-photo" src="/static/file/232/1232/img/3384/113masteronwork.jpg" width="80%" alt="歡迎報名中山資管113學年度《碩士在職專班》">
+        </a>
+        
+        <!--
+        <a href="https://web.mis.nsysu.edu.tw/p/406-1232-321642,r88.php?Lang=zh-tw" target=_blank" title="2023中山資管週">
+              <img class="focus-photo" src="/static/file/232/1232/img/825/137652052.jpg" width="80%" alt="2023中山資管週">
+        </a>
+        --> 
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+        
+        <!-- generated at Tue Dec 05 2023 12:24:11 --></div>
+                            <script>$(document).ready(function() {$.hajaxOpenUrl('/app/index.php?Action=mobileloadmod&Type=mobile_um_mstr&Nbr=9696','.sm_div_compound_ac4f8e453ea85ef27809853d0fda9f3e6_36374','',function(){menuDropAct(0);});})</script>
+                        </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+
+    <!-- Footer 區域 -->
+    <footer>
+        <p>&copy; 2023 資訊管理系. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript 部分，實現輪播功能 -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (slideIndex >= slides.length) { slideIndex = 0 }
+            if (slideIndex < 0) { slideIndex = slides.length - 1 }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+            setTimeout(showSlides, 2000); // 切換圖片的時間間隔，這裡是 2000 毫秒 (2 秒)
+        }
+    </script>
+
+</body>
+</html>

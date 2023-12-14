@@ -1,0 +1,65 @@
+/* bodystyle/styles.css */
+
+/* 主要內容區域置中 */
+main {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 2000px;  */
+    background: rgb(238,238,238);
+  }
+  
+  article {
+    text-align: center;
+  }
+  
+  main iframe {
+    text-align: center;
+    /* max-width: 100%;
+    height: auto; */
+  }
+  
+  footer {
+    background-color: #92002f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    
+  }
+  
+  address {
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    text-decoration: underline;
+  }
+
+  #latest-info {
+    margin-left: 100px; /* 將左邊距設為 100px */
+    /* background-color: blue; */
+  }
+ 
+  /* 設定 section 內的 hr 寬度為 50% */
+  #latest-info hr {
+    width: 50%;
+    /* 使用了 margin: 0; 來確保 <hr> 元素的左邊距為零，這樣就可以實現靠左對齊。 */
+    margin: 0;
+  }
+  
+  #morebutton {
+  /* display: inline-block; 讓 div 只包含文字的範圍 */
+  /* border: 1px solid #6e1d1d; 外框樣式，1px 寬度，#ccc 顏色可以更改 */
+  padding: 5px; /* 選擇性，設定內邊距以增加外框與內容的距離 */
+  }
+  
+  h3 a {
+    text-decoration: none; /* 移除超連結的底線 */
+    color: #007bff; /* 選擇性，設定連結文字顏色 */
+  }
